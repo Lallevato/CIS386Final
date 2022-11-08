@@ -1,14 +1,9 @@
-//Bryce Greenleaf
-//CIS 386
-
 import { useState, useEffect } from 'react';
 import { nanoid } from 'nanoid';
 import NotesList from './components/NotesList';
 import Search from './components/Search';
 import Header from './components/Header';
 
-//This is setting the base for the first notes when you open up the app
-//I have delted these notes 
 const App = () => {
 	const [notes, setNotes] = useState([
 		{
@@ -29,6 +24,7 @@ const App = () => {
 	]);
 
 	const [searchText, setSearchText] = useState('');
+
 //Just a darkmode setting
 	const [darkMode, setDarkMode] = useState(false);
 
@@ -48,6 +44,7 @@ const App = () => {
 			JSON.stringify(notes)
 		);
 	}, [notes]);
+
 //This is the add note button that gets the date and everything
 	const addNote = (text) => {
 		const date = new Date();
@@ -59,6 +56,7 @@ const App = () => {
 		const newNotes = [...notes, newNote];
 		setNotes(newNotes);
 	};
+	
 //This is the code to delete the notes
 	const deleteNote = (id) => {
 		const newNotes = notes.filter((note) => note.id !== id);
