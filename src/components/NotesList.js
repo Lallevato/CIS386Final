@@ -1,5 +1,5 @@
 import Note from './Note';
-import AddNote from './AddNote';
+import { AddNote } from './AddNote';
 
 const NotesList = ({
 	notes,

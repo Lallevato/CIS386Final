@@ -1,12 +1,67 @@
+import { useState } from 'react';
 import { MdDeleteForever } from 'react-icons/md';
 
-const Note = ({ id, text, date, handleDeleteNote }) => {
+const Note = ({ id, handleAddNote, date, handleDeleteNote }) => {
+	const [noteText, setNoteText] = useState('');
+	const characterLimit = 200;
+
+	const [ingredientText, setIngredientText] = useState('');
+
+	const [titleText, setTitleText] = useState('New Recipe');
+
+	const handleChange = (event) => {
+		if (characterLimit - event.target.value.length >= 0) {
+			setNoteText(event.target.value);
+		}
+	};
+
+	const handleIngredientChange = (event) => {
+		if (characterLimit - event.target.value.length >= 0) {
+			setIngredientText(event.target.value);
+		}
+	};
+
+	const handleTitleChange = (event) => {
+		if (30 - event.target.value.length >= 0) {
+			setTitleText(event.target.value);
+		}
+	};
+
+	const handleSaveClick = () => {
+		handleAddNote(noteText);
+		setNoteText('');
+		setIngredientText('');
+	};
+
 	return (
 		<div className='note'>
-			<div className='ingredients'>
-			<span>{text}</span>
+			<div className='titlearea'>
+				<textarea
+					rows='2'
+					cols='40'
+					maxlength='30'
+					value={titleText}
+					onChange={handleTitleChange}>
+				</textarea>
 			</div>
-			<span>{text}</span>
+			<div className='ingredients new'>
+			 <textarea
+	 			rows='9'
+	 			cols='10'
+	 			placeholder='Type to add ingredients...'
+	 			value={ingredientText}
+	 			onChange={handleIngredientChange}
+	 		></textarea>
+	 		</div>
+			<div><br></br></div>
+			<div className='note new'>
+			 <textarea
+	 			rows='9'
+	 			cols='10'
+	 			placeholder='Type to add recipe text...'
+	 			value={noteText}
+	 			onChange={handleChange}
+	 		></textarea>
 			<div className='note-footer'>
 				<small>{date}</small>
 				<MdDeleteForever
@@ -15,6 +70,7 @@ const Note = ({ id, text, date, handleDeleteNote }) => {
 					size='1.3em'
 				/>
 			</div>
+		</div>
 		</div>
 	);
 };

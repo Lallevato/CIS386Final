@@ -1,7 +1,7 @@
 import { useState } from 'react';
-//import AddIngredient from './AddIngredient';
+import { MdDeleteForever } from 'react-icons/md';
 
-const AddNote = ({ handleAddNote }) => {
+const AddNote = ({ id, handleAddNote, date, handleDeleteNote }) => {
 	const [noteText, setNoteText] = useState('');
 	const characterLimit = 200;
 
@@ -24,7 +24,7 @@ const AddNote = ({ handleAddNote }) => {
 	}
 
 	const handleSaveClick = () => {
-		handleAddNote(recipeText);
+		handleAddNote(noteText);
 		setNoteText('');
 		setIngredientText('');
 	};
@@ -32,15 +32,6 @@ const AddNote = ({ handleAddNote }) => {
 //Also where you can have the button to save the note which then adds the note
 	return (
 		<div>
-			<div className='ingredients new'>
-			<textarea
-					rows='9'
-					cols='10'
-					placeholder='Type to add ingredients...'
-					value={ingredientText}
-					onChange={handleIngredientChange}
-				></textarea>
-			</div>
 			<div className='note new'>
 				<textarea
 					rows='9'
@@ -50,18 +41,21 @@ const AddNote = ({ handleAddNote }) => {
 					onChange={handleChange}
 				></textarea>
 				<div className='note-footer'>
-					<small>
-						{characterLimit - noteText.length} Remaining Characters
-					</small>
+					<small>{date}</small>
 					<button className='save' onClick={() => {
 						handleSaveClick();
 						}}>
 						Save Recipe
 					</button>
+					<MdDeleteForever
+					onClick={() => handleDeleteNote(id)}
+					className='delete-icon'
+					size='1.3em'/>
 				</div>
+
 			</div>
 		</div>
 	);
 };
 
-export default AddNote;
+export {AddNote};

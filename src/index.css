@@ -45,17 +45,27 @@ code {
 }
 
 .note.new {
-	background-color: #67d7cc;
+	background-color: #dedede;
 	font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
 }
 
 textarea {
 	border: none;
 	resize: none;
-	background-color: #67d7cc;
+	background-color: #dedede;
 }
 
 textarea:focus {
+	outline: none;
+}
+
+textareatitle {
+	border: none;
+	resize: none;
+	background-color: #dedede;
+}
+
+textareatitle:focus {
 	outline: none;
 }
 
@@ -67,6 +77,18 @@ textarea:focus {
 }
 
 .save:hover {
+	background-color: #ededed;
+	cursor: pointer;
+}
+
+.addRecipe {
+	background-color: #c4bfbf;
+	border: none;
+	border-radius: 15px;
+	padding: 5px 10px 5px 10px;
+}
+
+.addRecipe:hover {
 	background-color: #ededed;
 	cursor: pointer;
 }
@@ -125,6 +147,6 @@ textarea:focus {
 }
 
 .ingredients.new {
-	background-color: #67d7cc;
+	background-color: #dedede;
 	font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
 }

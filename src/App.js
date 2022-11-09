@@ -3,6 +3,7 @@ import { nanoid } from 'nanoid';
 import NotesList from './components/NotesList';
 import Search from './components/Search';
 import Header from './components/Header';
+import Note from './components/Note';
 
 const App = () => {
 	const [notes, setNotes] = useState([
@@ -71,6 +72,8 @@ const App = () => {
 			<div className='container'>
 				<Header handleToggleDarkMode={setDarkMode} />
 				<Search handleSearchNote={setSearchText} />
+				<button className='addRecipe'>Add Recipe</button>
+
 				<NotesList
 					notes={notes.filter((note) =>
 						note.text.toLowerCase().includes(searchText)
