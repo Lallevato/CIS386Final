@@ -21,4 +21,7 @@ const NotesList = ({
 	);
 };
 
+<div className='ingredients new'>
+	
+</div>
 export default NotesList;
