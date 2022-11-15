@@ -38,7 +38,7 @@ const Note = ({ id, handleAddNote, date, handleDeleteNote }) => {
 			<div className='titlearea'>
 				<textarea
 					rows='2'
-					cols='40'
+					cols='35'
 					maxlength='30'
 					value={titleText}
 					onChange={handleTitleChange}>
