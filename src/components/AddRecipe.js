@@ -1,11 +1,14 @@
 import React from 'react';
+import { AddNote } from './AddNote';
+
 
 const AddRecipe = (props) => {
 	
 	return (
 
-		<button>{props.text}</button>
+		
+		<p>text</p>
 	);
 }
 
-export {AddIngredient};
+export {AddRecipe};

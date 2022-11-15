@@ -36,17 +36,18 @@ code {
 }
 
 .notes-list {
+	
+	grid-row-start: auto;
 	display: grid;
 	grid-gap: 1rem;
-	grid-template-columns: repeat(
-		auto-fill,
-		minmax(250px, 1fr)
+	grid-template-columns: repeat( auto-fill, minmax(250px, 1fr)
 	);
 }
 
 .note.new {
 	background-color: #dedede;
 	font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+	grid-row-start: auto;
 }
 
 textarea {
@@ -81,11 +82,13 @@ textareatitle:focus {
 	cursor: pointer;
 }
 
+
 .addRecipe {
 	background-color: #c4bfbf;
 	border: none;
 	border-radius: 15px;
 	padding: 5px 10px 5px 10px;
+	display: flex;
 }
 
 .addRecipe:hover {
@@ -93,7 +96,22 @@ textareatitle:focus {
 	cursor: pointer;
 }
 
+.plusButton {
+	border-radius: 300px;
+	height: 300px;
+	width: 300px;
+	font-size: 100px;
+	color: #ffffff;
+	background: #c4bfbf;
+	border: 2px #ffffff solid;
+  }
+
+  .plusButton:hover {
+	background: rgb(184, 184, 184);
+	cursor: pointer;
+  }
 .note {
+	grid-row-start: auto;
 	background-color: #b9b9b9;
 	border-radius: 10px;
 	padding: 1rem;
@@ -150,3 +168,4 @@ textareatitle:focus {
 	background-color: #dedede;
 	font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
 }
+
