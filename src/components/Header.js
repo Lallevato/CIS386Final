@@ -5,6 +5,7 @@ const Header = ({ handleToggleDarkMode }) => {
 		<div className='header'>
 			<h1>My Recipes</h1>
 			<button
+				type="toggle"
 				onClick={() =>
 					handleToggleDarkMode(
 						(previousDarkMode) => !previousDarkMode
