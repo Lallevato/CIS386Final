@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { MdDeleteForever } from 'react-icons/md';
 
-const Note = ({ id, handleAddNote, date, handleDeleteNote }) => {
+const Note = ({ id, date, handleDeleteNote }) => {
 	const [noteText, setNoteText] = useState('');
 	const characterLimit = 1000;
 
@@ -31,10 +31,9 @@ const Note = ({ id, handleAddNote, date, handleDeleteNote }) => {
 		<div className='note'>
 			<div className='titlearea'>
 				<textarea
-					type="titlearea"
+					type="title"
 					className="titlearea"
 					rows='2'
-					cols='35'
 					maxlength='30'
 					placeholder='Title'
 					value={titleText}
@@ -43,6 +42,7 @@ const Note = ({ id, handleAddNote, date, handleDeleteNote }) => {
 			</div>
 			<div className='ingredients new'>
 			 <textarea
+			    type='ingredient'
 	 			rows='9'
 	 			cols='10'
 	 			placeholder='Type to add ingredients...'
@@ -53,6 +53,7 @@ const Note = ({ id, handleAddNote, date, handleDeleteNote }) => {
 			<div><br></br></div>
 			<div className='note new'>
 			 <textarea
+			 	type='recipe'
 	 			rows='9'
 	 			cols='10'
 	 			placeholder='Type to add recipe text...'

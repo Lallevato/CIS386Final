@@ -61,14 +61,23 @@ textarea:focus {
 	outline: none;
 }
 
-textareatitle {
+textarea[type='ingredient'] {
 	border: none;
 	resize: none;
-	background-color: #c319bd;
+	background-color: #a4c3f3;
 }
 
-textareatitle:focus {
-	outline: none;
+textarea[type='recipe'] {
+	border: none;
+	resize: none;
+	background-color: #dedede;
+}
+
+textarea[type='title'] {
+	border: 5px;
+	resize: none;
+	background-color: #dedede;
+	font-size: large;
 }
 
 .save {
@@ -169,4 +178,8 @@ textareatitle:focus {
 .ingredients.new {
 	background-color: #a4c3f3;
 	font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+}
+
+.titlearea {
+	border-radius: 10px;
 }
