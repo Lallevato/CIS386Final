@@ -32,14 +32,15 @@ const Note = ({ id, date, handleDeleteNote }) => {
 			<div className='titlearea'>
 				<textarea
 					type="title"
-					className="titlearea"
 					rows='2'
+					cols='10'
 					maxlength='30'
 					placeholder='Title'
 					value={titleText}
 					onChange={handleTitleChange}>	
 				</textarea>
 			</div>
+			<div><br></br></div>
 			<div className='ingredients new'>
 			 <textarea
 			    type='ingredient'

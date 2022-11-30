@@ -74,7 +74,6 @@ textarea[type='recipe'] {
 }
 
 textarea[type='title'] {
-	border: 5px;
 	resize: none;
 	background-color: #dedede;
 	font-size: large;
@@ -120,6 +119,7 @@ textarea[type='title'] {
 	background: rgb(31, 45, 62);
 	cursor: pointer;
   }
+  
 .note {
 	grid-row-start: auto;
 	background-color: #4d4d37;
@@ -144,21 +144,6 @@ textarea[type='title'] {
 	cursor: pointer;
 }
 
-.search {
-	display: flex;
-	align-items: center;
-	background-color: rgb(89, 87, 54);
-	border-radius: 10px;
-	padding: 5px;
-	margin-bottom: 1.5em;
-}
-
-.search input {
-	border: none;
-	background-color: rgb(244, 249, 219);
-	width: 100%;
-}
-
 .search input:focus {
 	outline: none;
 }
@@ -181,5 +166,12 @@ textarea[type='title'] {
 }
 
 .titlearea {
+	background-color: #dedede;
+	padding: 1rem;
+	min-height: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	white-space: pre-wrap;
 	border-radius: 10px;
 }
