@@ -4,6 +4,8 @@ import { MdDeleteForever } from 'react-icons/md';
 const Note = ({ id, date, handleDeleteNote }) => {
 	const [noteText, setNoteText] = useState('');
 	const characterLimit = 1000;
+	const regex = /([+-]?([0-9][.])?[0-9]+)/g;
+
 
 	const [ingredientText, setIngredientText] = useState('');
 
@@ -25,6 +27,13 @@ const Note = ({ id, date, handleDeleteNote }) => {
 		if (30 - event.target.value.length >= 0) {
 			setTitleText(event.target.value);
 		}
+	};
+
+	//this is the doubling fucntion. When this works, triple is just a matter of copy and paste.
+	const doubleIngredients = (setIngredientText) => {
+		return setIngredientText.toString().replace(regex, regex * 2);
+		//below is test to see if integers will be deleted
+		//return ingredientText.toString().replace(regex, '');
 	};
 
 	return (
@@ -61,6 +70,13 @@ const Note = ({ id, date, handleDeleteNote }) => {
 	 			value={noteText}
 	 			onChange={handleChange}
 	 		></textarea>
+			
+			<div className='note-footer'>
+				<button
+					onClick={() => doubleIngredients()}
+				>Double</button>
+			</div>
+
 			<div className='note-footer'>
 				<small>{date}</small>
 				<MdDeleteForever
