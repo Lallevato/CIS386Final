@@ -30,10 +30,10 @@ const Note = ({ id, date, handleDeleteNote }) => {
 	};
 
 	//this is the doubling fucntion. When this works, triple is just a matter of copy and paste.
-	const doubleIngredients = (setIngredientText) => {
-		//setIngredientText.toString().replace(regex, regex * 2);
-		//below is test to see if integers will be deleted
-		return ingredientText.toString().replace(regex, '');
+	const doubleIngredients = (event) => {
+
+		//TODO: Turn numbers into integers for mathematical operations
+		setIngredientText(ingredientText.toString().replace(regex, regex * 2));
 	};
 
 	return (
