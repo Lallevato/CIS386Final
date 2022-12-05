@@ -11,18 +11,21 @@ const Note = ({ id, date, handleDeleteNote }) => {
 
 	const [titleText, setTitleText] = useState('New Recipe');
 
+	// This constant is for changing the text of the recipe directions.
 	const handleChange = (event) => {
 		if (characterLimit - event.target.value.length >= 0) {
 			setNoteText(event.target.value);
 		}
 	};
 
+	// This constant is for changing the text of the ingredients list.
 	const handleIngredientChange = (event) => {
 		if (characterLimit - event.target.value.length >= 0) {
 			setIngredientText(event.target.value);
 		}
 	};
 
+	// This constant is for changing the title of the recipe.
 	const handleTitleChange = (event) => {
 		if (30 - event.target.value.length >= 0) {
 			setTitleText(event.target.value);
@@ -45,6 +48,7 @@ const Note = ({ id, date, handleDeleteNote }) => {
 		}));
 	};
 
+	// Main recipe structure and styling.
 	return (
 		
 		<div className='note'>

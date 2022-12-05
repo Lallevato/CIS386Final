@@ -8,9 +8,9 @@ const App = () => {
 
 	]);
 
-	const [searchText, setSearchText] = useState('');
+	const [searchText] = useState('');
 
-//Just a darkmode setting
+//Darkmode setting
 	const [darkMode, setDarkMode] = useState(false);
 
 	useEffect(() => {
@@ -30,7 +30,7 @@ const App = () => {
 		);
 	}, [notes]);
 
-//This is the add note button that gets the date and everything
+//Add note button
 	const addNote = (text) => {
 		const date = new Date();
 		const newNote = {
@@ -42,16 +42,13 @@ const App = () => {
 		setNotes(newNotes);
 	};
 	
-//This is the code to delete the notes
+//Delete button filters out recipe with id of the pressed delete button
 	const deleteNote = (id) => {
 		const newNotes = notes.filter((note) => note.id !== id);
 		setNotes(newNotes);
 	};
 
-
-	//This code down below does a couple of things. First we have the darkmode toggle
-	//after that we have the search bar to find specific notes
-	//Also we have the add notes and the delete notes
+	//Main app structure, starting with the header and ending with the notelist.
 	return (
 		
 		<div className={`${darkMode && 'dark-mode'}`}>

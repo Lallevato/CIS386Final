@@ -1,5 +1,6 @@
 import React from 'react';
-//This is the header where you can change all of the text to the title of the webpage.
+
+//This is the header where you can change all of the text to the title of the webpage. Also includes darkmode toggle.
 const Header = ({ handleToggleDarkMode }) => {
 	return (
 		<div className='header'>

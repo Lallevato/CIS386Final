@@ -8,8 +8,7 @@ const AddNote = ({ id, handleAddNote, date, handleDeleteNote }) => {
 	const handleSaveClick = () => {
 		handleAddNote(noteText);
 	};
-//This is the main to create a new not having the placeholder and showing you how much text you have left.
-//Also where you can have the button to save the note which then adds the note
+//NewRecipe button creates a new, blank recipe.
 	return (
 		<div>
 			<div className='NewRecipe'>
