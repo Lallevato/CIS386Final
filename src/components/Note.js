@@ -29,11 +29,20 @@ const Note = ({ id, date, handleDeleteNote }) => {
 		}
 	};
 
-	//this is the doubling fucntion. When this works, triple is just a matter of copy and paste.
+	// This constart is used to triple all of the integers in the ingredients.
 	const doubleIngredients = (event) => {
+		// This is the function used to double all the integers. It works by replacing any integers found by the same number multiplied by 2.
+		setIngredientText(ingredientText.toString().replace(regex, function(match){
+			return match * 2;
+		}));
+	};
 
-		//TODO: Turn numbers into integers for mathematical operations
-		setIngredientText(ingredientText.toString().replace(regex, regex * 2));
+	// This constant is used to triple all of the integers in the ingredients.
+	const tripleIngredients = (event) => {
+		// This is the function used to triple all the integers. It works by replacing any integers found by the same number multiplied by 3.
+		setIngredientText(ingredientText.toString().replace(regex, function(match){
+			return match * 3;
+		}));
 	};
 
 	return (
@@ -71,20 +80,25 @@ const Note = ({ id, date, handleDeleteNote }) => {
 	 			value={noteText}
 	 			onChange={handleChange}
 	 		></textarea>
-
 			<div className='note-footer'>
 				<small>{date}</small>
 				<button
 					onClick={() => doubleIngredients()}
 					className='doublebutton'
 				><strong>2X</strong></button>
+			<div className='note-footer'>
+				<button
+					onClick={() => tripleIngredients()}
+					className='triplebutton'
+				><strong>3X</strong></button>
 				<MdDeleteForever
 					onClick={() => handleDeleteNote(id)}
 					className='delete-icon'
 					size='1.3em'
 				/>
 			</div>
-		</div>
+			</div>
+			</div>
 		</div>
 	);
 };

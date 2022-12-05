@@ -179,9 +179,23 @@ textarea[type='title'] {
 .doublebutton {
 	background-color: #dedede;
 	border: none;
+	justify-content: space-between;
+	align-items: center;
 	color:rgb(170, 115, 5);
 }
 
 .doublebutton:hover {
+	cursor: pointer;
+}
+
+.triplebutton {
+	background-color: #dedede;
+	border: none;
+	justify-content: space-between;
+	align-items: center;
+	color:rgb(170, 115, 5);
+}
+
+.triplebutton:hover {
 	cursor: pointer;
 }
