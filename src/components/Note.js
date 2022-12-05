@@ -31,12 +31,13 @@ const Note = ({ id, date, handleDeleteNote }) => {
 
 	//this is the doubling fucntion. When this works, triple is just a matter of copy and paste.
 	const doubleIngredients = (setIngredientText) => {
-		return setIngredientText.toString().replace(regex, regex * 2);
+		//setIngredientText.toString().replace(regex, regex * 2);
 		//below is test to see if integers will be deleted
-		//return ingredientText.toString().replace(regex, '');
+		return ingredientText.toString().replace(regex, '');
 	};
 
 	return (
+		
 		<div className='note'>
 			<div className='titlearea'>
 				<textarea
@@ -70,15 +71,13 @@ const Note = ({ id, date, handleDeleteNote }) => {
 	 			value={noteText}
 	 			onChange={handleChange}
 	 		></textarea>
-			
-			<div className='note-footer'>
-				<button
-					onClick={() => doubleIngredients()}
-				>Double</button>
-			</div>
 
 			<div className='note-footer'>
 				<small>{date}</small>
+				<button
+					onClick={() => doubleIngredients()}
+					className='doublebutton'
+				><strong>2X</strong></button>
 				<MdDeleteForever
 					onClick={() => handleDeleteNote(id)}
 					className='delete-icon'

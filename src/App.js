@@ -52,7 +52,6 @@ const App = () => {
 	//This code down below does a couple of things. First we have the darkmode toggle
 	//after that we have the search bar to find specific notes
 	//Also we have the add notes and the delete notes
-//<Search handleSearchNote={setSearchText} />
 	return (
 		
 		<div className={`${darkMode && 'dark-mode'}`}>

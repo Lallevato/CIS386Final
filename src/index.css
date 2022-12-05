@@ -175,3 +175,13 @@ textarea[type='title'] {
 	white-space: pre-wrap;
 	border-radius: 10px;
 }
+
+.doublebutton {
+	background-color: #dedede;
+	border: none;
+	color:rgb(170, 115, 5);
+}
+
+.doublebutton:hover {
+	cursor: pointer;
+}
