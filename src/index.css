@@ -188,7 +188,7 @@ textarea[type='title'] {
 	cursor: pointer;
 }
 
-.triplebutton {
+.halfbutton {
 	background-color: #dedede;
 	border: none;
 	justify-content: space-between;
@@ -196,6 +196,6 @@ textarea[type='title'] {
 	color:rgb(170, 115, 5);
 }
 
-.triplebutton:hover {
+.halfbutton:hover {
 	cursor: pointer;
 }

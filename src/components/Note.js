@@ -37,11 +37,11 @@ const Note = ({ id, date, handleDeleteNote }) => {
 		}));
 	};
 
-	// This constant is used to triple all of the integers in the ingredients.
-	const tripleIngredients = (event) => {
-		// This is the function used to triple all the integers. It works by replacing any integers found by the same number multiplied by 3.
+	// This constant is used to half all of the integers in the ingredients.
+	const halfIngredients = (event) => {
+		// This is the function used to half all the integers. It works by replacing any integers found by the same number divided by 2.
 		setIngredientText(ingredientText.toString().replace(regex, function(match){
-			return match * 3;
+			return match / 2;
 		}));
 	};
 
@@ -85,12 +85,12 @@ const Note = ({ id, date, handleDeleteNote }) => {
 				<button
 					onClick={() => doubleIngredients()}
 					className='doublebutton'
-				><strong>2X</strong></button>
+				><strong>Double</strong></button>
 			<div className='note-footer'>
 				<button
-					onClick={() => tripleIngredients()}
-					className='triplebutton'
-				><strong>3X</strong></button>
+					onClick={() => halfIngredients()}
+					className='halfbutton'
+				><strong>Half</strong></button>
 				<MdDeleteForever
 					onClick={() => handleDeleteNote(id)}
 					className='delete-icon'
