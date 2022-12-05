@@ -1,3 +1,12 @@
+/*
+* Project Name: Recipe App
+* Authors: Luke Allevato, Bryce Greenleaf, Taylor Lee, Brooklynn Silva
+* Last modified: December 5th, 2022
+* Desc: An app for keeping track of food recipes with functions to adjust the serving size.
+* To run, navigate to directory containing App.js. From a command line, npm install, then npm start.
+*/
+
+
 import { useState, useEffect } from 'react';
 import { nanoid } from 'nanoid';
 import NotesList from './components/NotesList';
