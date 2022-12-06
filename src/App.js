@@ -14,7 +14,7 @@ import Header from './components/Header';
 
 const App = () => {
 	const [notes, setNotes] = useState([
-
+		
 	]);
 
 	const [searchText] = useState('');
@@ -56,7 +56,7 @@ const App = () => {
 		const newNotes = notes.filter((note) => note.id !== id);
 		setNotes(newNotes);
 	};
-
+	
 	//Main app structure, starting with the header and ending with the notelist.
 	return (
 		
@@ -65,7 +65,6 @@ const App = () => {
 				<Header handleToggleDarkMode={setDarkMode} />
 				
 				<NotesList
-				
 					notes={notes.filter((note) =>
 						note.text.toLowerCase().includes(searchText)
 					)}
